@@ -1,9 +1,4 @@
 Zone,Channel Name,Bandwidth,Power,RX Freq,TX Freq,CTCSS Decode,CTCSS Encode,TX Prohibit
-Seattle Misc,Sea Aquar Ch 2,12.5K,Low,452.6375,457.6375,186.2,192.8,Off
-Seattle Misc,Sea Aquar Ch 1,12.5K,Low,451.3375,456.3375,229.1,218.1,Off
-Seattle Misc,Sea Aquar Backup,12.5K,Low,456.3125,456.3125,Off,Off,Off
-Seattle Misc,WPZ 1,12.5K,Mid,452.275,457.275,Off,Off,On
-Seattle Misc,WPZ 2,12.5K,Mid,452.7,457.7,Off,Off,On
 SnoCo Analog,VHF Sim 146.520,25K,Mid,146.52,146.52,Off,Off,Off
 SnoCo Analog,UHF Sim 446.000,25K,Mid,446,446,Off,Off,Off
 SnoCo Analog,SNOSX1 144.460,25K,High,144.46,144.46,123,123,Off
@@ -86,3 +81,8 @@ Part 97 Channels,FRS 11,12.5K,Low,467.6375,467.6375,Off,Off,Off
 Part 97 Channels,FRS 12,12.5K,Low,467.6625,467.6625,Off,Off,Off
 Part 97 Channels,FRS 13,12.5K,Low,467.6875,467.6875,Off,Off,Off
 Part 97 Channels,FRS 14,12.5K,Low,467.7125,467.7125,Off,Off,Off
+Seattle Misc,Sea Aquar Ch 2,12.5K,Low,452.6375,457.6375,186.2,192.8,Off
+Seattle Misc,Sea Aquar Ch 1,12.5K,Low,451.3375,456.3375,229.1,218.1,Off
+Seattle Misc,Sea Aquar Backup,12.5K,Low,456.3125,456.3125,Off,Off,Off
+Seattle Misc,WPZ 1,12.5K,Mid,452.275,457.275,Off,Off,On
+Seattle Misc,WPZ 2,12.5K,Mid,452.7,457.7,Off,Off,On
