@@ -2,6 +2,7 @@ Audio Test 2,9999
 BC 1,3027
 BM APRS,310999
 BM Disconnect,4000
+BM Local Data,9900
 BM Parrot,31000
 BM Parrot Priv,9990
 BM Parrot Priv 2,310997
