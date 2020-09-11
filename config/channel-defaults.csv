@@ -9,7 +9,7 @@
 8,CTCSS/DCS Encode,Off
 9,Contact,Wash 1
 10,Contact Call Type,Group Call
-11,Radio ID,DMR ID
+11,Radio ID,KD7OAB
 12,Busy Lock/TX Permit,Same Color Code
 13,Squelch Mode,Carrier
 14,Optional Signal,Off
@@ -20,7 +20,7 @@
 19,Color Code,0
 20,Slot,1
 21,Scan List,REQUIRED
-22,Receive Group List,None
+22,Receive Group List,openSpot RG List
 23,TX Prohibit,Off
 24,Reverse,Off
 25,Simplex TDMA,Off
