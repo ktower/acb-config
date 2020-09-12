@@ -18,6 +18,7 @@ anytone-config-builder.pl \
   --talkgroups-csv=./talkgroups.csv \
   --output-directory=wherever \
   --nicknames=prefix
+```
 
 # Important Notes
 # lf vs crlf
