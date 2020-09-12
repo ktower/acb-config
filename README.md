@@ -19,3 +19,9 @@ anytone-config-builder.pl \
   --output-directory=wherever \
   --nicknames=prefix
 
+# Important Notes
+# lf vs crlf
+The ACB utility expects all .csv input files to have crlf line endings, not
+just lf.  Otherwise the program will run to completion without any error
+but the output files will not have anything other than a header line.
+
