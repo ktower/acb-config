@@ -6,4 +6,6 @@
   --talkgroups-csv=talkgroups.csv \
   --output-directory=output \
   --config=config \
-  --nicknames=prefix
+  --nicknames=prefix \
+  --sorting=repeaters-first \
+  --hotspot-tx-permit=always
