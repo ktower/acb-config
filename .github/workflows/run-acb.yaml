@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - '**.csv'
 
 env:
   ACB_REPO: K7ABD/anytone-config-builder
