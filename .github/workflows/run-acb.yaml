@@ -17,8 +17,8 @@ jobs:
     steps:
       - name: Configure Perl environment
         run: |
-          apt-get update
-          DEBIAN_FRONTEND=noninteractive apt-get -yq install libtext-csv-perl
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install libtext-csv-perl
       - name: Checkout ACB
         uses: actions/checkout@v2
         with:
