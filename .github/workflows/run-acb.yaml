@@ -29,7 +29,7 @@ jobs:
         with:
           path: ${{ env.ACB_CONFIG_PATH }}
       - name: Make output directory
-        run: mkdir $JOB_OUTPUT_PATH
+        run: mkdir $GITHUB_WORKSPACE/$JOB_OUTPUT_PATH
       - name: Run ACB to generate output
         run: |
           ${GITHUB_WORKSPACE}/${ACB_REPO_PATH}/anytone-config-builder.pl \
@@ -38,7 +38,7 @@ jobs:
             --digital-repeaters-csv=digital-repeaters.csv \
             --talkgroups-csv=talkgroups.csv \
             --config=config \
-            --output-directory=$JOB_OUTPUT_PATH \
+            --output-directory=$GITHUB_WORKSPACE/$JOB_OUTPUT_PATH \
             --nicknames=prefix \
             --sorting=repeaters-first \
             --hotspot-tx-permit=always
@@ -47,5 +47,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: csv-output-${{ github.run_number }}
-          path: ${{ env.JOB_OUTPUT_PATH }}/*.csv
+          path: ${{ GITHUB_WORKSPACE }}/${{ env.JOB_OUTPUT_PATH }}/*.csv
 
