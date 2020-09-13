@@ -47,5 +47,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: csv-output-${{ github.run_number }}
-          path: ${{ GITHUB_WORKSPACE }}/${{ env.JOB_OUTPUT_PATH }}/*.csv
+          path: ${{ github.workspace }}/${{ env.JOB_OUTPUT_PATH }}/*.csv
 
