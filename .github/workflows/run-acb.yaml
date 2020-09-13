@@ -32,7 +32,7 @@ jobs:
         run: mkdir $JOB_OUTPUT_PATH
       - name: Run ACB to generate output
         run: |
-          ${ACB_REPO}/anytone-config-builder.pl \
+          ${GITHUB_WORKSPACE}/${ACB_REPO}/anytone-config-builder.pl \
             --analog-csv=analog.csv \
             --digital-others-csv=digital-others.csv \
             --digital-repeaters-csv=digital-repeaters.csv \
