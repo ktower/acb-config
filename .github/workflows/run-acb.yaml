@@ -42,7 +42,7 @@ jobs:
             --nicknames=prefix \
             --sorting=repeaters-first \
             --hotspot-tx-permit=always
-        working-directory: ${{ env.ACB_REPO_PATH }}
+        working-directory: ${{ env.ACB_CONFIG_PATH }}
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
