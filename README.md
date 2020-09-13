@@ -9,6 +9,10 @@ available https://github.com/K7ABD/anytone-config-builder or https://www.k7abd.n
 Browse to [K7ABD's website](https://www.k7abd.net/anytone-config-builder/) and submit the `.csv` files there.  Click "Upload" to process, and expect to immediately download a ZIP file with the results.
 
 ## Via CLI
+### Requirements
+Before running the ACB script, the `libtext-csv-perl` package (Ubuntu) must be installed.
+
+### Executing
 The following command probably will work:
 ```
 anytone-config-builder.pl \
