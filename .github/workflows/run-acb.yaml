@@ -1,0 +1,51 @@
+name: Run ACB to build output CSV files
+on: 
+  push:
+    branches:
+      - master
+
+env:
+  ACB_REPO: K7ABD/anytone-config-builder
+  ACB_REPO_PATH: acb          # Relative to $GITHUB_WORKSPACE
+  ACB_CONFIG_PATH: acb-config # Relative to $GITHUB_WORKSPACE
+  JOB_OUTPUT_PATH: output
+
+jobs:
+  run_acb:
+    name: Run ACB
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Configure Perl environment
+        run: |
+          apt-get update
+          DEBIAN_FRONTEND=noninteractive apt-get -yq install libtext-csv-perl
+      - name: Checkout ACB
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.ACB_REPO }}
+          path: ${{ env.ACB_REPO_PATH }}
+      - name: Checkout this repo
+        uses: actions/checkout@v2
+        with:
+          path: ${{ env.ACB_CONFIG_PATH }}
+      - name: Make output directory
+        run: mkdir $JOB_OUTPUT_PATH
+      - name: Run ACB to generate output
+        run: |
+          ${ACB_REPO}/anytone-config-builder.pl \
+            --analog-csv=analog.csv \
+            --digital-others-csv=digital-others.csv \
+            --digital-repeaters-csv=digital-repeaters.csv \
+            --talkgroups-csv=talkgroups.csv \
+            --config=config \
+            --output-directory=$JOB_OUTPUT_PATH \
+            --nicknames=prefix \
+            --sorting=repeaters-first \
+            --hotspot-tx-permit=always
+        working-directory: ${{ env.ACB_REPO_PATH }}
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: csv-output-${{ github.run_number }}
+          path: ${{ env.JOB_OUTPUT_PATH }}/*.csv
+
