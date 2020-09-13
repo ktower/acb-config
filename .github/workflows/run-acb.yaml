@@ -1,4 +1,4 @@
-name: Run ACB to build output CSV files
+name: Build CSV Output Files
 on: 
   push:
     branches:
